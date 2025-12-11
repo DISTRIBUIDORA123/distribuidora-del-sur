@@ -98,3 +98,19 @@ document.getElementById("formNuevoUsuario").addEventListener("submit", async (e)
     alert("Usuario guardado.");
     cargarUsuarios();
 });
+// ========================
+// MENU MÓVIL (toggle)
+// ========================
+const menuToggle = document.getElementById("menuToggle");
+const sidebar = document.querySelector(".sidebar");
+
+menuToggle.addEventListener("click", () => {
+    sidebar.classList.toggle("active");
+});
+
+// Cerrar sidebar cuando se selecciona una opción
+document.querySelectorAll(".menu-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+        sidebar.classList.remove("active");
+    });
+});

@@ -276,3 +276,56 @@
         padding: 12px;
     }
 }
+/* ============================
+   BOTÓN DE MENÚ (MÓVIL)
+ ============================ */
+
+.menu-toggle {
+    display: none;
+    background: #0d47a1;
+    color: white;
+    font-size: 22px;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* ============================
+   SIDEBAR MÓVIL
+ ============================ */
+
+@media (max-width: 900px) {
+
+    /* mostrar el botón ☰ */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* sidebar oculto inicialmente */
+    .sidebar {
+        position: fixed;
+        left: -260px;
+        top: 0;
+        height: 100%;
+        width: 230px;
+        background: #0d47a1;
+        transition: left 0.25s ease-out;
+        z-index: 1000;
+    }
+
+    /* sidebar visible */
+    .sidebar.active {
+        left: 0;
+    }
+
+    /* contenido se ajusta */
+    .main-content {
+        padding: 15px;
+    }
+
+    .topbar {
+        justify-content: space-between;
+        gap: 10px;
+    }
+}
