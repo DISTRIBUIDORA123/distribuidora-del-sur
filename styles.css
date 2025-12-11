@@ -215,3 +215,64 @@
     border-radius: 6px;
     border: none;
 }
+/* ============================
+   RESPONSIVE (MÓVIL)
+ ============================ */
+
+@media (max-width: 768px) {
+
+    /* Hacer layout vertical */
+    .dash-layout {
+        flex-direction: column;
+    }
+
+    /* SIDEBAR se oculta inicialmente */
+    .sidebar {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+
+    .menu-btn {
+        flex: 1 1 45%;
+        text-align: center;
+    }
+
+    /* CONTENIDO */
+    .main-content {
+        padding: 10px;
+    }
+
+    .topbar {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    /* TABLAS EN MOVIL */
+    .table th,
+    .table td {
+        padding: 6px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .menu-btn {
+        flex: 1 1 100%;
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .logout-btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .section {
+        padding: 12px;
+    }
+}
